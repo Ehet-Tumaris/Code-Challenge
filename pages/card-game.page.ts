@@ -35,7 +35,7 @@ export class CardGamePage {
         return deckId;
     }
 
-    async suffleDeck(apiContext: APIRequestContext, deckId: string) {
+    async shuffleDeck(apiContext: APIRequestContext, deckId: string) {
         let shuffledDeck = await apiContext.get(`/api/deck/${deckId}/shuffle/`);
         let responseBody = await this.getResponseBody(shuffledDeck);
         let shuffled = responseBody.shuffled;
